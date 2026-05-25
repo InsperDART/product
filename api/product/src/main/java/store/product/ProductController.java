@@ -15,9 +15,10 @@ import org.springframework.web.bind.annotation.RequestBody;
     url="http://product:8080"
 )
 public interface ProductController {
+
     @PostMapping("/products")
-    public ResponseEntity<Void> create(
-        @RequestBody ProductIn in
+    ResponseEntity<Void> create(
+        @RequestBody ProductIn newProduct
     );
 
     @GetMapping("/products")
@@ -28,9 +29,11 @@ public interface ProductController {
         @PathVariable String id
     );
 
-
     @DeleteMapping("/products/{id}")
     public ResponseEntity<Void> delete(
         @PathVariable String id
     );
+
+    @GetMapping("/products/health-check")
+    public ResponseEntity<Void> healthCheck();
 }
