@@ -5,9 +5,9 @@ import lombok.Builder;
 @Builder
 public record ProductOut(
 
-    Int id,
+    String id,
     String name,
-    String price,
+    Float price,
     String unit
 
 ) {}

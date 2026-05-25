@@ -25,12 +25,12 @@ public interface ProductController {
 
     @GetMapping("/products/{id}")
     public ResponseEntity<ProductOut> findById(
-        @PathVariable Int id
+        @PathVariable String id
     );
 
 
     @DeleteMapping("/products/{id}")
     public ResponseEntity<Void> delete(
-        @PathVariable Int id
+        @PathVariable String id
     );
 }
