@@ -1,6 +1,7 @@
 package store.product;
 
 import java.util.List;
+import jakarta.validation.Valid;
 
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.ResponseEntity;
@@ -17,9 +18,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 public interface ProductController {
 
     @PostMapping("/products")
-    ResponseEntity<Void> create(
-        @RequestBody ProductIn newProduct
-    );
+    ResponseEntity<ProductOut> create( @RequestBody @Valid ProductIn newProduct );
 
     @GetMapping("/products")
     public ResponseEntity<List<ProductOut>> findAll();
