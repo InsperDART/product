@@ -6,7 +6,7 @@ import lombok.Builder;
 public record ProductIn(
 
     String name,
-    Float price,
+    Double price,
     String unit
 
 ) {}

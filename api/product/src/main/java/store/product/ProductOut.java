@@ -7,7 +7,7 @@ public record ProductOut(
 
     String id,
     String name,
-    Float price,
+    Double price,
     String unit
 
 ) {}
