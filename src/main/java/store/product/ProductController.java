@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
 @FeignClient(
-    name="product",
+    name="products",
     url="http://product:8080"
 )
 public interface ProductController {
